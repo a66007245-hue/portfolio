@@ -1,0 +1,398 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Kirang+Haerang&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background: #f7f7f0;
+    color: #111;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+#MAIN {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    border: 2px solid #111;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.MAIN-NAV {
+    position: absolute;
+    top: 25px;
+    left: 15%;
+    width: 70%;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #aaa;
+    z-index: 100;
+}
+
+
+/* 메뉴 글자 */
+
+.MAIN-NAV > a,
+.PROJECT-MENU > a {
+    color: #111;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* PROJECTS */
+
+.PROJECT-MENU {
+    position: relative;
+}
+
+
+/* =========================
+   PROJECT DROPDOWN
+========================= */
+
+
+.PROJECT-MENU { position: relative;}
+
+.PROJECT-MENU::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 165px;
+    height: 37px;
+    z-index: 199;
+}
+
+
+/* =========================
+   PROJECT DROPDOWN
+========================= */
+
+.PROJECT-DROPDOWN {
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 165px;
+    padding: 18px 12px;
+    background: #f7f7f0;
+    border: 1px solid #111;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    z-index: 200;
+}
+
+
+/* =========================
+   PROJECTS HOVER
+========================= */
+
+.PROJECT-MENU:hover .PROJECT-DROPDOWN {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   DROPDOWN MENU TEXT
+========================= */
+
+.PROJECT-DROPDOWN a {
+    color: #111;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   DROPDOWN TEXT HOVER
+========================= */
+
+.PROJECT-DROPDOWN a:hover {
+    color: #111;
+    text-decoration: none;
+}
+
+
+/* =========================
+   MAIN VISUAL
+========================= */
+
+.MAIN-VISUAL {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================
+   ALL IMAGES
+========================= */
+
+.VISUAL-IMAGE {
+    position: absolute;
+    display: block;
+    object-fit: contain;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* 이미지 전체 hover */
+
+.VISUAL-IMAGE:hover {
+    filter: brightness(1.03);
+}
+
+
+/* =========================
+   LEFT TOP IMAGE
+========================= */
+
+.IMAGE-MATERIAL {
+    width: 24%;
+    left: 1%;
+    top: -1%;
+    transform: rotate(-2deg);
+    z-index: 3;
+}
+
+
+.IMAGE-MATERIAL:hover {
+    transform:
+        rotate(-2deg)
+        translateY(-6px)
+        rotate(1deg);
+}
+
+
+/* =========================
+   RIGHT TOP IMAGE
+========================= */
+
+.IMAGE-FASHION {
+    width: 19%;
+    right: 12%;
+    top: 5%;
+    z-index: 3;
+}
+
+
+.IMAGE-FASHION:hover {
+    transform:
+        translateY(-7px)
+        rotate(1deg);
+}
+
+
+/* =========================
+   LEFT BOTTOM IMAGE
+========================= */
+
+.IMAGE-RESEARCH {
+    width: 30%;
+    left: 2%;
+    bottom: -4%;
+    z-index: 3;
+}
+
+
+.IMAGE-RESEARCH:hover {
+    transform:
+        translateY(-6px)
+        rotate(-1deg);
+}
+
+
+/* =========================
+   RIGHT BOTTOM IMAGE
+========================= */
+
+.IMAGE-STYLE {
+    width: 25%;
+    right: 1%;
+    bottom: -1%;
+    z-index: 3;
+}
+
+
+.IMAGE-STYLE:hover {
+    transform:
+        translateY(-6px)
+        rotate(1deg);
+}
+
+
+/* =========================
+   CENTER MAIN IMAGE
+========================= */
+
+.IMAGE-MAIN {
+    width: 59%;
+    height: 105%;
+    left: 51%;
+    bottom: -15%;
+    transform: translateX(-50%);
+    object-fit: contain;
+    z-index: 1;
+}
+
+
+.IMAGE-MAIN:hover {
+    transform:
+        translateX(-50%)
+        scale(1.015);
+}
+
+
+/* =========================
+   RED ABOUT / ME
+========================= */
+
+.MAIN-TEXT {
+    position: absolute;
+
+    color: #ff0000;
+
+    font-family: "Kirang Haerang", sans-serif;
+    font-weight: 400;
+    line-height: 0.8;
+
+    pointer-events: none;
+    z-index: 10;
+}
+
+
+/* ABOUT */
+
+.ABOUT-TEXT {
+    top: 15%;
+    left: 36%;
+    font-size: clamp(70px, 10vw, 140px);
+}
+
+
+/* ME */
+
+.ME-TEXT {
+    left: 60%;
+    bottom: 5%;
+    font-size: clamp(70px, 10vw, 140px);
+}
+
+
+/* =========================
+   KEYWORDS
+========================= */
+
+.KEYWORD {
+    position: absolute;
+    color: #111;
+    font-family:
+        "Patrick Hand",
+        "Comic Sans MS",
+        cursive;
+    font-size: clamp(25px, 3vw, 25px);
+    font-weight: 400;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 11;
+}
+
+
+/* =========================
+   SENSE
+   왼쪽 위
+========================= */
+
+.KEY-SENSE {
+    right: 18%;
+    top: 52%;
+}
+
+
+/* =========================
+   OBSERVATION
+   오른쪽 위
+========================= */
+
+.KEY-OBSERVATION {
+    left: 16%;
+    top: 32%;
+}
+
+
+/* =========================
+   JUDGEMENT
+   왼쪽 아래
+========================= */
+
+.KEY-JUDGEMENT {
+    left: 17%;
+    top: 65%;
+}
+
+
+/* =========================
+   ACTION
+   오른쪽 아래
+========================= */
+
+.KEY-ACTION {
+    right: 29%;
+    top: 29%;
+}
+
+
+/* =========================
+   OWNERSHIP
+   가운데
+   → 나중에 여기만 조절
+========================= */
+
+.KEY-OWNERSHIP {
+    left: 31%;
+    top: 88%;
+}

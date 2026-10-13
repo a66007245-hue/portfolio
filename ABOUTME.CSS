@@ -1,0 +1,1248 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY / WRAPPER
+========================================================= */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#WRAPPER {
+    width: 100%;
+    max-width: 1440px;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE CLIP
+   화면 전체 너비
+========================================================= */
+
+.PAGE-CLIP {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.PAGE-CLIP img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   COMMON TEXT
+========================================================= */
+
+.SECTION-TITLE {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.SUB-SECTION-TITLE {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   01. INTRO
+   INTRO만 넓게 사용
+========================================================= */
+
+#INTRO {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    padding: 20px 0;
+    height: auto;
+    gap: 80px;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+#INTRO .ABOUT-CONTENT {
+    width: 100%;
+    max-width: none;
+}
+
+
+/* 프로필 사진 */
+
+.PROFILE-PHOTO {
+    flex: 1;
+    aspect-ratio: 8 / 9;
+}
+
+.PROFILE-PHOTO img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 프로필 정보 */
+
+.PROFILE-INFO {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 상단 키워드 */
+
+.KEYWORDS {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 125px;
+}
+
+
+/* 중앙 소개 문구 */
+
+.INTRO {
+    font-size: 35px;
+    line-height: 1.4;
+    text-align: right;
+    font-weight: 400;
+    margin: 0 140px 205px 0;
+    word-break: keep-all;
+}
+
+
+/* 하단 상세 데이터 */
+
+.DATAS {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: flex-end;
+    width: 85%;
+    margin-right: 90px;
+}
+
+.DATA-ROW {
+    display: flex;
+    font-size: 14px;
+}
+
+.DATA-LABEL {
+    width: 200px;
+}
+
+.DATA-VALUE {
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   02. MY KEYWORDS
+========================================================= */
+
+#KEYWORDS {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+#KEYWORDS .ABOUT-CONTENT {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.KEYWORDS-TITLE {
+    margin-top: 8px;
+    margin-left: 250px;
+    margin-bottom: 60px;
+}
+
+.KEYWORDS-CONTAINER {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 중앙 이미지 */
+
+.CENTER-PHOTO {
+    width: 500px;
+    height: auto;
+}
+
+.CENTER-PHOTO img {
+    width: 100%;
+    display: block;
+}
+
+
+/* 키워드 행 */
+
+.KEYWORD-ROW {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+
+/* 키워드 박스 */
+
+.KEYWORD-BOX {
+    background-color: #f7ff7d;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.KEYWORD-ROW:hover .KEYWORD-BOX {
+    transform: scale(1.05);
+}
+
+
+/* 키워드 설명 */
+
+.KEYWORD-ROW .DATA-VALUE {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.KEYWORD-ROW:hover .DATA-VALUE {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 왼쪽 */
+
+.POS-OWNERSHIP {
+    top: 25%;
+    right: 56%;
+}
+
+.POS-OBSERVATION {
+    top: 65%;
+    right: 58%;
+}
+
+.POS-ACTION {
+    bottom: 12%;
+    right: 53%;
+}
+
+
+/* 오른쪽 */
+
+.POS-SENSE {
+    top: 20%;
+    left: 58%;
+}
+
+.POS-JUDGEMENT {
+    top: 48%;
+    left: 58%;
+}
+
+
+/* =========================================================
+   03. FASHION EXPERIENCE
+========================================================= */
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+#EXPERIENCE {
+
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 80px auto 120px;
+
+    position: relative;
+}
+
+#EXPERIENCE .ABOUT-CONTENT {
+
+    width: 100%;
+    max-width: 1080px;
+}
+
+
+/* =========================================================
+   EXPERIENCE TITLE
+========================================================= */
+
+.EXPERIENCE-TITLE {
+
+    position: relative;
+    width: 100%;
+    margin-bottom: 80px;
+    line-height: 1.2;
+    text-align: center;
+    transform: none;
+}
+
+.EXPERIENCE-FASHION,
+.EXPERIENCE-EXPERIENCE {
+
+    transform: none;
+}
+
+
+/* =========================================================
+   TIMELINE WRAPPER
+========================================================= */
+
+.TIMELINE-WRAPPER {
+
+    width: 100%;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   세로선
+   - 정확한 중앙이 아니라 48%
+   - 콘텐츠 뒤에 깔림
+========================================================= */
+
+.TIMELINE-LINE {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 48%;
+    width: 1px;
+    background-color: #111;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   EXPERIENCE ITEM
+========================================================= */
+
+.EXPERIENCE-ITEM {
+
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 48% 1px 52%;
+    align-items: start;
+    min-height: 0;
+    margin-bottom: 90px;
+}
+
+
+/* 마지막 항목 */
+
+.EXPERIENCE-ITEM:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.EXPERIENCE-VISUAL,
+.EXPERIENCE-INFO {
+
+    position: relative;
+    z-index: 3;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   기본 위치
+========================================================= */
+
+.EXPERIENCE-VISUAL {
+
+    grid-column: 1;
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: -70px;
+}
+
+
+.EXPERIENCE-INFO {
+
+    grid-column: 3;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: -70px;
+}
+
+
+/* 01 이미지 LEFT / 텍스트 RIGHT  */
+
+.EXPERIENCE-01 .EXPERIENCE-VISUAL {
+    grid-column: 1;
+    margin-right: -70px;
+}
+
+.EXPERIENCE-01 .EXPERIENCE-INFO{
+    grid-column: 3;
+    margin-left: 150px;
+    margin-top: 35px;
+}
+
+/* 02   이미지 LEFT / 텍스트 RIGHT  */
+
+.EXPERIENCE-02 .EXPERIENCE-VISUAL{
+
+    grid-column: 3;
+    justify-content: flex-start;
+    margin-left: -70px;
+    margin-right: 0;
+}
+
+.EXPERIENCE-02 .EXPERIENCE-INFO {
+
+    grid-column: 1;
+    align-items: flex-end;
+    text-align: right;
+    margin-right: 150px;
+    margin-top: -240px;
+}
+
+/* 03   이미지 LEFT / 텍스트 RIGHT  */
+
+.EXPERIENCE-03 .EXPERIENCE-VISUAL {
+
+    grid-column: 1;
+    margin-right: -70px;
+}
+
+.EXPERIENCE-03 .EXPERIENCE-INFO {
+
+    grid-column: 3;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+/* 04   이미지 LEFT / 텍스트 RIGHT  */
+
+.EXPERIENCE-04 .EXPERIENCE-VISUAL {
+
+    grid-column: 3;
+    justify-content: flex-start;
+    margin-left: -70px;
+    margin-right: 0;
+}
+
+.EXPERIENCE-04 .EXPERIENCE-INFO {
+
+    grid-column: 1;
+    align-items: flex-end;
+    text-align: right;
+    margin-right: 150px;
+    margin-top: -280px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.EXP-HEADER {
+
+    width: 100%;
+}
+
+
+.EXP-HEADER h3 {
+
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.35;
+    margin: 0 0 7px;
+}
+
+
+.SUB-MAJOR,
+.EXP-SUB {
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+/* =========================================================
+   UNIVERSITY
+========================================================= */
+
+.UNIVERSITY-EXPERIENCE {
+
+    width: 100%;
+    max-width: 430px;
+    margin-top: 24px;
+    text-align: left;
+}
+
+
+.UNIVERSITY-ITEM {
+
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+
+.UNIVERSITY-ITEM h4 {
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 5px;
+}
+
+
+.UNIVERSITY-ITEM p {
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+.UNIVERSITY-ITEM:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   01 / 03 IMAGE GROUP
+========================================================= */
+
+.UNIVERSITY-IMAGES {
+
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.UNIVERSITY-IMAGE-ROW {
+
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+
+.UNIVERSITY-IMAGE-ROW .GRAY-BOX {
+
+    width: calc(50% - 2.5px);
+    max-width: none;
+    aspect-ratio: 4 / 3;
+}
+
+
+/* =========================================================
+   GRAY BOX
+========================================================= */
+
+.GRAY-BOX {
+
+    width: 100%;
+    max-width: 430px;
+    aspect-ratio: 4 / 3;
+    background-color: #e0e0e0;
+    overflow: hidden;
+}
+
+
+.GRAY-BOX img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================================
+   권조 이미지
+========================================================= */
+
+.EXPERIENCE-03 .GRAY-BOX {
+
+    width: calc(50% - 2.5px);
+    max-height: 280px;
+    aspect-ratio: 3 / 4;
+}
+
+
+/* =========================================================
+   SINGLE IMAGE
+========================================================= */
+
+.SINGLE-IMAGE {
+
+    width: 100%;
+    max-width: 430px;
+    aspect-ratio: 4 / 3;
+}
+
+
+/* =========================================================
+   EXPERIENCE LIST
+========================================================= */
+
+.EXP-LIST {
+
+    list-style: none;
+    margin: 17px 0 0;
+    padding: 0;
+}
+
+
+.EXP-LIST li {
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   일반 도트
+========================================================= */
+
+.EXP-LIST.dot-list li::before {
+
+    content: "•";
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   교육 내용
+========================================================= */
+
+.EXP-LIST.square-list li::before {
+
+    content: "▪";
+    font-size: 11px;
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   02 / 04 왼쪽 정렬 보정
+========================================================= */
+/* 02. 엔코어플래닝 */
+.EXPERIENCE-02 .EXP-LIST {
+    width: 85%;
+    text-align: left;
+    margin-right: -260px;
+}
+
+
+/* 04. UI/UX 교육 */
+.EXPERIENCE-04 .EXP-LIST {
+    width: 85%;
+    text-align: left;
+    margin-right: -70px;
+}
+
+
+/* =========================================================
+   02 / 04 오른쪽 이미지
+========================================================= */
+
+.EXPERIENCE-02 .SINGLE-IMAGE,
+.EXPERIENCE-04 .SINGLE-IMAGE {
+
+    width: 100%;
+    max-width: 430px;
+}
+
+
+/* =========================================================
+   EXPERIENCE 간격
+========================================================= */
+
+.EXPERIENCE-01 {
+    margin-bottom: 100px;
+}
+
+.EXPERIENCE-02 {
+    margin-bottom: 100px;
+}
+
+.EXPERIENCE-03 {
+    margin-bottom: 100px;
+}
+
+.EXPERIENCE-04 {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   04/05. AWARD & RECOGNITION
+========================================================= */
+
+#AWARDS {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    margin: 0 auto 120px;
+}
+
+#AWARDS .ABOUT-CONTENT {
+    width: 100%;
+    max-width: 980px;
+}
+
+.AWARDS-TITLE {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    transform: none;
+}
+
+
+/* 각 서브 섹션 */
+
+.AWARD-SECTION,
+.RECOGNITION-SECTION {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+
+/* AWARD */
+
+.AWARD-CONTENT {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+
+/* 노란색 카드 */
+
+.STICKY-GROUP {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+}
+
+.STICKY-BOX {
+    border: 1px solid #e0e0e0;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.STICKY-BOX h4 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.STICKY-BOX p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* AWARD 이미지 */
+
+.AWARD-CONTENT .GRAY-BOX {
+    width: 450px;
+    aspect-ratio: 1 / 1;
+    background-color: #e0e0e0;
+}
+
+
+/* RECOGNITION */
+
+.RECOGNITION-SECTION .SUB-SECTION-TITLE {
+    text-align: right;
+}
+
+.RECOGNITION-CONTENT {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.RECOGNITION-CONTENT .GRAY-BOX {
+    width: 450px;
+    aspect-ratio: 1 / 1;
+    background-color: #e0e0e0;
+}
+
+
+/* 2 × 2 GRID */
+
+.GRID-CONTAINER {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+}
+
+.GRID-CELL {
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.GRID-CELL .DATA-LABEL {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.GRID-CELL .DATA-VALUE {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   06. PEOPLE'S REVIEW
+========================================================= */
+
+#PEOPLES-REVIEW {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto 140px;
+}
+
+.REVIEW-TITLE {
+    margin-bottom: 60px;
+}
+
+.REVIEW-CONTAINER {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.REVIEW-CONTAINER > div {
+    flex: 1;
+    aspect-ratio: 3 / 4;
+    background-color: #f2f073;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.REVIEWS p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #000;
+    word-break: keep-all;
+}
+
+.REVIEWS span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+/* =========================================================
+   07/08. WHAT I DO & SKILLS
+========================================================= */
+
+#POWER {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    gap: 120px;
+    margin: 0 auto 100px;
+}
+
+#WHAT-I-DO,
+#SKILLS {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#POWER .SECTION-TITLE {
+    margin-bottom: 50px;
+}
+
+.DO-LIST,
+.SKILLS-LIST {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.DO-LIST > div,
+.SKILLS-LIST > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#POWER .DATA-LABEL {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+#POWER .DATA-VALUE {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+/* WEB SKILLS */
+
+.WEB-SKILLS-GRID {
+    width: 300px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.WEB-SKILL-BOX {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.WEB-SKILL-BOX img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================================================
+   09. PROJECTS
+========================================================= */
+
+#PROJECTS {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto 140px;
+}
+
+.PROJECTS-TITLE {
+    margin-bottom: 60px;
+}
+
+.PROJECTS-CONTAINER {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.PROJECT-BOX {
+    position: relative;
+    flex: 1;
+    aspect-ratio: 5 / 3;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.PROJECT-BOX a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.PROJECT-BOX img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* 검정색 반투명 오버레이 */
+
+.PROJECT-OVERLAY {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+
+/* 프로젝트 이름 */
+
+.PROJECT-NAME {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+
+/* 호버 */
+
+.PROJECT-BOX:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+#CONTACT {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+
+/* CONTACT TITLE */
+
+.CONTACT-TITLE {
+    width: 100%;
+    text-align: left;
+    margin: 0 0 80px;
+}
+
+
+/* =========================================================
+   BUSINESS CARD
+========================================================= */
+
+.BUSINESS-CARD {
+    width: 680px;
+    aspect-ratio: 1.8 / 1;
+    perspective: 1200px;
+    margin-bottom: 160px;
+}
+
+.CARD-INNER {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.BUSINESS-CARD:hover .CARD-INNER {
+    transform: rotateY(180deg);
+}
+
+
+/* =========================================================
+   CARD FRONT / BACK
+========================================================= */
+
+.CARD-FRONT,
+.CARD-BACK {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.CARD-FRONT img,
+.CARD-BACK img{
+    width: 100%;
+    height: 100%;
+}
+/* FRONT */
+
+.CARD-FRONT {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);
+}
+
+/* BACK */
+
+.CARD-BACK {
+    padding: 55px 65px;
+    display: flex;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+
+/* =========================================================
+   EXPERIENCE RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #EXPERIENCE {
+        max-width: 90%;
+    }
+
+    .TIMELINE-ROW {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .TIMELINE-CENTER {
+        display: none;
+    }
+
+    .TIMELINE-AXIS {
+        display: none;
+    }
+
+    .LEFT-CONTENT,
+    .RIGHT-CONTENT {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .ROW-01,
+    .ROW-02,
+    .ROW-03,
+    .ROW-04 {
+        min-height: auto;
+        margin-top: 60px;
+    }
+
+    .ROW-01 .UNIVERSITY-IMAGES,
+    .ROW-03 .UNIVERSITY-IMAGES {
+        transform: none;
+    }
+
+    .UNIVERSITY,
+    .EXPERIENCE-COMPANY,
+    .SMART-WEB-UIUX,
+    .UNIVERSITY-IMAGES,
+    .GRAY-BOX {
+        max-width: 100%;
+    }
+
+    .AWARD-CONTENT,
+    .RECOGNITION-CONTENT {
+        flex-direction: column;
+    }
+
+    .STICKY-GROUP,
+    .AWARD-CONTENT .GRAY-BOX,
+    .RECOGNITION-CONTENT .GRAY-BOX {
+        width: 100%;
+    }
+}
